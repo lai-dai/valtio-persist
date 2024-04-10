@@ -2,6 +2,7 @@
   "name": "@lai-dai/valtio-persist",
   "version": "0.0.1",
   "description": "valtio persist",
+  "private": false,
   "scripts": {
     "build": "tsup ./src"
   },
@@ -37,5 +38,9 @@
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts"
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
