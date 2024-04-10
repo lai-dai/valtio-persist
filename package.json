@@ -1,0 +1,41 @@
+{
+  "name": "@lai-dai/valtio-persist",
+  "version": "0.0.1",
+  "description": "valtio persist",
+  "scripts": {
+    "build": "tsup ./src"
+  },
+  "homepage": "https://github.com/lai-dai/valtio-persist",
+  "url": "https://github.com/lai-dai/valtio-persist/issue",
+  "email": "laidai9966@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lai-dai/valtio-persist.git"
+  },
+  "keywords": [
+    "valtio",
+    "persist"
+  ],
+  "author": "lai dai",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "tsup": "^6.7.0",
+    "typescript": "^5.4.4",
+    "valtio": "^1.13.2"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts"
+}
