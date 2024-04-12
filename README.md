@@ -1,2 +1,21 @@
-## test package
-https://www.npmjs.com/package/valtio-persist
+## Install
+
+```
+npm i github:lai-dai/valtio-persist
+```
+
+## Usage
+
+```js
+const state = proxyPersist(
+  {
+    text: "hello world",
+    count: 0,
+  },
+  {
+    key: "hello",
+  }
+);
+
+// state -> text | count | persister
+```
