@@ -1,5 +1,6 @@
-export { proxyPersist, createProxyStoragePersister } from "./proxy-persist";
-export type {
+export {
+  proxyPersist,
+  createProxyStoragePersister,
   ProxyPersistOptions,
   CreateStoragePersisterOptions,
   PersistedClient,
