@@ -170,6 +170,7 @@ export function proxyPersist<T extends object>(
 ): T & { persister?: Persister<T> } {
   const clientState = proxy<T & { persister?: Persister<T> }>(
     Object.assign(
+      {},
       initialObject,
       proxyPersistClientRestore<T>({ persister, version, maxAge }) || {}
     )
