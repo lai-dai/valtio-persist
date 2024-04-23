@@ -45,6 +45,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
-    "react": "^18"
+    "react": "^18",
+    "valtio": "^1.13.2"
   }
 }
