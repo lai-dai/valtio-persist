@@ -358,7 +358,6 @@ function proxyPersist(initialObject, {
 }) {
   const clientState = proxy(
     Object.assign(
-      {},
       initialObject,
       proxyPersistClientRestore({ persister, version, maxAge }) || {}
     )
