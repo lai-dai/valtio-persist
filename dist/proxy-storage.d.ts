@@ -47,11 +47,11 @@ interface CreateStoragePersisterOptions<T extends object> {
      */
     deserialize?: (cachedString: string) => PersistedClient<T>;
 }
-interface ProxyPersistOptions<T extends object> extends CreateStoragePersisterOptions<T>, ProxyPersistClientRestore<T>, Omit<ProxyPersistClientSave<T>, "clientState"> {
+interface ProxyWithStorageOptions<T extends object> extends CreateStoragePersisterOptions<T>, ProxyPersistClientRestore<T>, Omit<ProxyPersistClientSave<T>, "clientState"> {
 }
 declare function createProxyStoragePersister<T extends object>({ storage, key, throttleTime, serialize, deserialize, }: CreateStoragePersisterOptions<T>): Persister<T>;
-declare function proxyPersist<T extends object>(initialObject: T, { key, maxAge, version, throttleTime, deserialize, serialize, storage, persister, }: ProxyPersistOptions<T>): T & {
+declare function proxyWithStorage<T extends object>(initialObject: T, { key, maxAge, version, throttleTime, deserialize, serialize, storage, persister, }: ProxyWithStorageOptions<T>): T & {
     persister?: Persister<T>;
 };
 
-export { CreateStoragePersisterOptions, PersistedClient, ProxyPersistOptions, createProxyStoragePersister, proxyPersist };
+export { CreateStoragePersisterOptions, PersistedClient, ProxyWithStorageOptions, createProxyStoragePersister, proxyWithStorage };

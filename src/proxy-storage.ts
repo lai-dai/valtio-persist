@@ -56,7 +56,7 @@ export interface CreateStoragePersisterOptions<T extends object> {
   deserialize?: (cachedString: string) => PersistedClient<T>;
 }
 
-export interface ProxyPersistOptions<T extends object>
+export interface ProxyWithStorageOptions<T extends object>
   extends CreateStoragePersisterOptions<T>,
     ProxyPersistClientRestore<T>,
     Omit<ProxyPersistClientSave<T>, "clientState"> {}
@@ -149,7 +149,7 @@ function proxyPersistClientSave<T extends object>({
   persister?.persistClient(persistedClient);
 }
 
-export function proxyPersist<T extends object>(
+export function proxyWithStorage<T extends object>(
   initialObject: T,
   {
     key,
@@ -166,7 +166,7 @@ export function proxyPersist<T extends object>(
       serialize,
       storage,
     }),
-  }: ProxyPersistOptions<T>
+  }: ProxyWithStorageOptions<T>
 ): T & { persister?: Persister<T> } {
   const clientState = proxy<T & { persister?: Persister<T> }>(
     Object.assign(

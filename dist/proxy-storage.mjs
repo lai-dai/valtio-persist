@@ -1,4 +1,4 @@
-// src/proxy-persist.ts
+// src/proxy-storage.ts
 import { proxy, subscribe } from "valtio";
 function createProxyStoragePersister({
   storage,
@@ -77,7 +77,7 @@ function proxyPersistClientSave({
   };
   persister?.persistClient(persistedClient);
 }
-function proxyPersist(initialObject, {
+function proxyWithStorage(initialObject, {
   key,
   maxAge,
   version,
@@ -123,6 +123,6 @@ function throttle(func, wait = 100) {
 }
 export {
   createProxyStoragePersister,
-  proxyPersist
+  proxyWithStorage
 };
-//# sourceMappingURL=proxy-persist.mjs.map
+//# sourceMappingURL=proxy-storage.mjs.map

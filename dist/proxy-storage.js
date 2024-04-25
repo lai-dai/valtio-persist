@@ -17,13 +17,13 @@ var __copyProps = (to, from, except, desc) => {
 };
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// src/proxy-persist.ts
-var proxy_persist_exports = {};
-__export(proxy_persist_exports, {
+// src/proxy-storage.ts
+var proxy_storage_exports = {};
+__export(proxy_storage_exports, {
   createProxyStoragePersister: () => createProxyStoragePersister,
-  proxyPersist: () => proxyPersist
+  proxyWithStorage: () => proxyWithStorage
 });
-module.exports = __toCommonJS(proxy_persist_exports);
+module.exports = __toCommonJS(proxy_storage_exports);
 var import_valtio = require("valtio");
 function createProxyStoragePersister({
   storage,
@@ -102,7 +102,7 @@ function proxyPersistClientSave({
   };
   persister?.persistClient(persistedClient);
 }
-function proxyPersist(initialObject, {
+function proxyWithStorage(initialObject, {
   key,
   maxAge,
   version,
@@ -149,6 +149,6 @@ function throttle(func, wait = 100) {
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   createProxyStoragePersister,
-  proxyPersist
+  proxyWithStorage
 });
-//# sourceMappingURL=proxy-persist.js.map
+//# sourceMappingURL=proxy-storage.js.map

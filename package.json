@@ -1,7 +1,7 @@
 {
-  "name": "@lai-dai/valtio-persist",
-  "version": "0.1.1",
-  "description": "valtio persist",
+  "name": "@lai-dai/valtio-storage",
+  "version": "0.1.0",
+  "description": "valtio storage",
   "private": false,
   "scripts": {
     "build": "tsup ./src"
@@ -15,7 +15,10 @@
   },
   "keywords": [
     "valtio",
-    "persist"
+    "persist",
+    "storage",
+    "valtio persist",
+    "valtio storage"
   ],
   "author": "lai dai",
   "license": "ISC",

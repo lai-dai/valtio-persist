@@ -1,7 +1,7 @@
 ## Install
 
 ```
-npm i github:lai-dai/valtio-persist
+npm i github:lai-dai/valtio-storage
 ```
 
 ## Usage
