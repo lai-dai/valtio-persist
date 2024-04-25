@@ -6,12 +6,12 @@
   "scripts": {
     "build": "tsup ./src"
   },
-  "homepage": "https://github.com/lai-dai/valtio-persist",
-  "url": "https://github.com/lai-dai/valtio-persist/issue",
+  "homepage": "https://github.com/lai-dai/valtio-storage",
+  "url": "https://github.com/lai-dai/valtio-storage/issue",
   "email": "laidai9966@gmail.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lai-dai/valtio-persist.git"
+    "url": "git+https://github.com/lai-dai/valtio-storage.git"
   },
   "keywords": [
     "valtio",
